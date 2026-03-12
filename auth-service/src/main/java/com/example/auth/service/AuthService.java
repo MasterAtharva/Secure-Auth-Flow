@@ -1,5 +1,15 @@
 package com.example.auth.service;
 
+  import java.util.HashSet;
+  import java.util.Set;
+
+  import org.springframework.beans.factory.annotation.Autowired;
+  import org.springframework.security.authentication.AuthenticationManager;
+  import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+  import org.springframework.security.core.userdetails.UserDetails;
+  import org.springframework.security.crypto.password.PasswordEncoder;
+  import org.springframework.stereotype.Service;
+
   import com.example.auth.dto.LoginRequest;
   import com.example.auth.dto.RegisterRequest;
   import com.example.auth.model.Role;
@@ -8,15 +18,6 @@ package com.example.auth.service;
   import com.example.auth.repository.UserRepository;
   import com.example.auth.security.CustomUserDetailsService;
   import com.example.auth.security.JwtUtil;
-  import org.springframework.beans.factory.annotation.Autowired;
-  import org.springframework.security.authentication.AuthenticationManager;
-  import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-  import org.springframework.security.core.userdetails.UserDetails;
-  import org.springframework.security.crypto.password.PasswordEncoder;
-  import org.springframework.stereotype.Service;
-
-  import java.util.HashSet;
-  import java.util.Set;
 
   @Service
   public class AuthService {
@@ -81,4 +82,4 @@ package com.example.auth.service;
           UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
           return jwtUtil.generateToken(userDetails);
       }
-  }\n
+  }

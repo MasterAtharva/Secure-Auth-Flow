@@ -21,4 +21,4 @@ package com.example.auth.controller;
       public ResponseEntity<List<User>> getAllUsers() {
           return ResponseEntity.ok(userRepository.findAll());
       }
-  }\n
+  }

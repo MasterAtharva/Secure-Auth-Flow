@@ -8,4 +8,4 @@ package com.example.auth;
       public static void main(String[] args) {
           SpringApplication.run(AuthServiceApplication.class, args);
       }
-  }\n
+  }

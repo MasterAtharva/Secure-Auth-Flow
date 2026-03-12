@@ -61,4 +61,4 @@ package com.example.auth.security;
 
           return http.build();
       }
-  }\n
+  }

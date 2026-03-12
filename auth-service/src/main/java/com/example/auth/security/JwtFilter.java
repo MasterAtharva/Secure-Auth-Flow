@@ -1,9 +1,7 @@
 package com.example.auth.security;
 
-  import jakarta.servlet.FilterChain;
-  import jakarta.servlet.ServletException;
-  import jakarta.servlet.http.HttpServletRequest;
-  import jakarta.servlet.http.HttpServletResponse;
+  import java.io.IOException;
+
   import org.springframework.beans.factory.annotation.Autowired;
   import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
   import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,7 +10,10 @@ package com.example.auth.security;
   import org.springframework.stereotype.Component;
   import org.springframework.web.filter.OncePerRequestFilter;
 
-  import java.io.IOException;
+  import jakarta.servlet.FilterChain;
+  import jakarta.servlet.ServletException;
+  import jakarta.servlet.http.HttpServletRequest;
+  import jakarta.servlet.http.HttpServletResponse;
 
   @Component
   public class JwtFilter extends OncePerRequestFilter {
@@ -51,4 +52,4 @@ package com.example.auth.security;
 
           filterChain.doFilter(request, response);
       }
-  }\n
+  }

@@ -1,13 +1,13 @@
 package com.example.auth.controller;
 
+  import java.util.HashMap;
+  import java.util.Map;
+
   import org.springframework.http.ResponseEntity;
   import org.springframework.security.core.Authentication;
   import org.springframework.web.bind.annotation.GetMapping;
   import org.springframework.web.bind.annotation.RequestMapping;
   import org.springframework.web.bind.annotation.RestController;
-
-  import java.util.HashMap;
-  import java.util.Map;
 
   @RestController
   @RequestMapping("/api/user")
@@ -21,4 +21,4 @@ package com.example.auth.controller;
           profile.put("message", "Welcome to the User Profile!");
           return ResponseEntity.ok(profile);
       }
-  }\n
+  }

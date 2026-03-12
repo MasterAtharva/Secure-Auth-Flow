@@ -1,7 +1,7 @@
 package com.example.auth.security;
 
-  import com.example.auth.model.User;
-  import com.example.auth.repository.UserRepository;
+  import java.util.stream.Collectors;
+
   import org.springframework.beans.factory.annotation.Autowired;
   import org.springframework.security.core.authority.SimpleGrantedAuthority;
   import org.springframework.security.core.userdetails.UserDetails;
@@ -9,7 +9,8 @@ package com.example.auth.security;
   import org.springframework.security.core.userdetails.UsernameNotFoundException;
   import org.springframework.stereotype.Service;
 
-  import java.util.stream.Collectors;
+  import com.example.auth.model.User;
+  import com.example.auth.repository.UserRepository;
 
   @Service
   public class CustomUserDetailsService implements UserDetailsService {
@@ -30,4 +31,4 @@ package com.example.auth.security;
                           .collect(Collectors.toList())
           );
       }
-  }\n
+  }
